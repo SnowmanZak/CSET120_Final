@@ -48,7 +48,7 @@ img {
 }
 
 .menu-item-details{
-    margin-left: 30px;
+    margin-left: 40px;
     text-align: left;
 }
 
@@ -56,15 +56,42 @@ img {
     font-family: cursive;
 }
 
-a{
-    font-size: larger;
+.section1{
+    font-size: large;
     border: 2px solid black;
     text-decoration: none;
-    color: rgb(215, 171, 114);
-    background-color: black;
+    color: rgb(0, 0, 0);
+    background-color: brown;
+    border-radius: 20px;
 }
 
-a:hover{
+.section1:hover{
 color:black ;
-background-color: white;
+background-color:rgb(207, 155, 72) ;
+
+}
+
+.button-con{
+
+}
+
+button{
+    height:50px ;
+    right: 600px;
+    width: 300px;
+    border-radius: 45px;
+    font-size: larger;
+    color: black;
+    background-color: brown;
+    position: fixed;
+    bottom: 10px;
+
+}
+
+button:hover{
+    background-color:rgb(207, 155, 72) ;
+}
+a{
+    text-decoration: none;
+    color: black;
 }
