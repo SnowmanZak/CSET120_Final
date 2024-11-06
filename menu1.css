@@ -17,6 +17,7 @@ body{
 }
 
 .logo{
+    border: none;
     width: 300px;
     height: auto;
     margin-bottom: 0;
@@ -34,6 +35,7 @@ h1{
 }
 
 img {
+    border: 2px solid black;
     width: 100px;
     height: 100px;
 }
@@ -52,4 +54,17 @@ img {
 
 .price{
     font-family: cursive;
+}
+
+a{
+    font-size: larger;
+    border: 2px solid black;
+    text-decoration: none;
+    color: rgb(215, 171, 114);
+    background-color: black;
+}
+
+a:hover{
+color:black ;
+background-color: white;
 }
