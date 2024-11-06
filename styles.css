@@ -67,6 +67,8 @@ body {
 .nav_bar{
     background-color: antiquewhite;
     text-align: center;
+    padding-bottom: 20px;
+    border-bottom: solid #682110 0.25px;
 }
 nav ul {
     list-style: none;
@@ -87,4 +89,53 @@ nav a:hover{
     color: #B3391C;
     text-decoration:underline ;
     transition: 0.5s;
+}
+.featured{
+    border-top: solid #682110 0.25px;
+    background-color: antiquewhite;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.featured h2{
+    color: #682110;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+    width: 90%;
+}
+.gallery-item {
+    text-align: center;
+}
+.gallery-item h3 {
+    font-size: 1em;
+    color: #682110;
+    margin: 10px 0; 
+}
+.image {
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    position: relative;
+}
+.image h3{
+    color: #B3391C;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.5s;
+}
+.image img:hover {
+    opacity: 1;
+    transform: scale(1);
 }
