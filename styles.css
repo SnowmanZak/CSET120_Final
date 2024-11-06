@@ -161,7 +161,7 @@ button:hover{
     text-decoration: none;
     color: black;
 }
-body{
+.background{
     background-image: url(il_570xN.6077565577_scbk.avif) ;
     background-repeat: no-repeat;
     background-size: cover;
