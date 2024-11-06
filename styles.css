@@ -171,7 +171,7 @@ button:hover{
     margin: 0;
     padding: 0;
 }
-body {
+.home{
     font-family: 'Lobster Two', cursive;
 }
 .header{
