@@ -1,0 +1,97 @@
+body{
+    background-image:url(./OIP\ \(1\).jpg) ;
+    background-size: contain;
+    background-attachment: fixed;
+    align-items: center;
+    font-family: cursive;
+    
+}
+
+.menu{
+    border: 20px solid black;
+    margin-left: 300px;
+    margin-right: 300px;
+    background-color: wheat;
+    align-items: center;
+    text-align: center
+}
+
+.logo{
+    border: none;
+    width: 300px;
+    height: auto;
+    margin-bottom: 0;
+}
+
+h1{
+    margin-top: 0;
+    font-size: 500%;
+}
+
+.section{
+    font-size: 200%;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(142, 20, 20);
+}
+
+img {
+    border: 2px solid black;
+    width: 100px;
+    height: 100px;
+}
+
+.menu-items{
+    margin-left: 120px;
+    align-items: center;
+    align-content: center;
+    display: flex;
+}
+
+.menu-item-details{
+    margin-left: 40px;
+    text-align: left;
+}
+
+.price{
+    font-family: cursive;
+}
+
+.section1{
+    font-size: large;
+    border: 2px solid black;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    background-color: brown;
+    border-radius: 20px;
+}
+
+.section1:hover{
+color:black ;
+background-color:rgb(207, 155, 72) ;
+
+}
+
+.button-con{
+
+}
+
+button{
+    height:50px ;
+    right: 600px;
+    width: 300px;
+    border-radius: 45px;
+    font-size: larger;
+    color: black;
+    background-color: brown;
+    position: fixed;
+    bottom: 10px;
+
+}
+
+button:hover{
+    background-color:rgb(207, 155, 72) ;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
