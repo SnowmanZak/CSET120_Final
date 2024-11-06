@@ -1,0 +1,206 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Lobster Two', cursive;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image:
+    linear-gradient(45deg, antiquewhite 25%, transparent 25%), 
+    linear-gradient(135deg, antiquewhite 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, antiquewhite 75%),
+    linear-gradient(135deg, transparent 75%, antiquewhite 75%);
+    background-size:25px 25px;
+    background-position:0 0, 12.5px 0, 12.5px -12.5px, 0px 12.5px; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.button-group {
+    display: flex;
+}
+.header button{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Lobster Two', cursive;
+}
+.header button:last-child{
+    margin-right: 60px;
+}
+.header img{
+    margin-left: 70px;
+    height: auto;
+    width: 100px;
+    border-radius: 50px;
+    border: #682110 solid 1px;
+}
+.header h1{
+    font-style: italic;
+    font-size: 50px;
+    color: #682110;
+}
+.logIn{
+    background-color: antiquewhite;
+}
+.logIn:hover{
+    background-color: #682110;
+    color: antiquewhite;
+    transition: 0.5s;
+    border: antiquewhite solid 1px;
+}
+.signUp{
+    color: #682110;
+    background-color: antiquewhite;
+}
+.signUp:hover{
+    background-color: #682110;
+    color: antiquewhite;
+    transition: 0.5s;
+    border: antiquewhite solid 1px;
+}
+.nav_bar{
+    background-color: antiquewhite;
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: solid #682110 0.25px;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    width: 50%;
+    margin: auto;
+    font-size: 35px;
+}
+nav a{
+    text-decoration: none;
+    color: #682110;
+}
+nav a:hover{
+    color: #B3391C;
+    text-decoration:underline ;
+    transition: 0.5s;
+}
+.featured{
+    border-top: solid #682110 0.25px;
+    background-color: antiquewhite;
+    padding-top: 20px;
+    padding-bottom: 70px;
+}
+.featured h2{
+    color: #682110;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+    width: 90%;
+}
+.gallery-item {
+    text-align: center;
+}
+.gallery-item h3 {
+    font-size: 1em;
+    color: #682110;
+    margin: 10px 0; 
+}
+.image {
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    position: relative;
+}
+.image h3{
+    color: #B3391C;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.5s;
+}
+.image img:hover {
+    opacity: 1;
+    transform: scale(1);
+}
+.footer {
+    background-image:
+    linear-gradient(45deg, antiquewhite 25%, transparent 25%), 
+    linear-gradient(135deg, antiquewhite 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, antiquewhite 75%),
+    linear-gradient(135deg, transparent 75%, antiquewhite 75%);
+    background-size:25px 25px;
+    background-position:0 0, 12.5px 0, 12.5px -12.5px, 0px 12.5px; 
+    color: #2e1c19;
+    padding-bottom: 20px 0;
+    font-family: 'Lobster Two', cursive;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 50px;
+    flex-wrap: wrap;
+}
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+.footer-section h3 {
+    font-size: 1.5em;
+    color: #682110;
+    margin-bottom: 10px;
+}
+.footer-section p {
+    font-size: 1em;
+    line-height: 1.6;
+    font-weight: 800;
+    color: #682110;
+}
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+.social-icons a{
+    text-decoration: none;
+    color: #B3391C;
+    font-size: 25px;
+}
+.insta:hover{
+    color: #FC02D8;
+}
+.facebook:hover{
+    color: #3B579D;
+}
+.twitter:hover{
+    color: #1DA0F1;
+}
+.youtube:hover{
+    color: #FF0000;
+}
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    background-color: #2e1c19;
+    color: #B3391C;
+    font-size: 0.9em;
+}
+.footer-bottom p {
+    margin: 0;
+}
