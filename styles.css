@@ -11,10 +11,10 @@ body {
     align-items: center;
     justify-content: space-between;
     background-image:
-    linear-gradient(45deg, #ccc 25%, transparent 25%), 
-    linear-gradient(135deg, #ccc 25%, transparent 25%),
-    linear-gradient(45deg, transparent 75%, #ccc 75%),
-    linear-gradient(135deg, transparent 75%, #ccc 75%);
+    linear-gradient(45deg, antiquewhite 25%, transparent 25%), 
+    linear-gradient(135deg, antiquewhite 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, antiquewhite 75%),
+    linear-gradient(135deg, transparent 75%, antiquewhite 75%);
     background-size:25px 25px;
     background-position:0 0, 12.5px 0, 12.5px -12.5px, 0px 12.5px; 
     padding-top: 10px;
@@ -94,7 +94,7 @@ nav a:hover{
     border-top: solid #682110 0.25px;
     background-color: antiquewhite;
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 70px;
 }
 .featured h2{
     color: #682110;
@@ -138,4 +138,69 @@ nav a:hover{
 .image img:hover {
     opacity: 1;
     transform: scale(1);
+}
+.footer {
+    background-image:
+    linear-gradient(45deg, antiquewhite 25%, transparent 25%), 
+    linear-gradient(135deg, antiquewhite 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, antiquewhite 75%),
+    linear-gradient(135deg, transparent 75%, antiquewhite 75%);
+    background-size:25px 25px;
+    background-position:0 0, 12.5px 0, 12.5px -12.5px, 0px 12.5px; 
+    color: #2e1c19;
+    padding-bottom: 20px 0;
+    font-family: 'Lobster Two', cursive;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 50px;
+    flex-wrap: wrap;
+}
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+.footer-section h3 {
+    font-size: 1.5em;
+    color: #682110;
+    margin-bottom: 10px;
+}
+.footer-section p {
+    font-size: 1em;
+    line-height: 1.6;
+    font-weight: 800;
+    color: #682110;
+}
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+.social-icons a{
+    text-decoration: none;
+    color: #B3391C;
+    font-size: 25px;
+}
+.insta:hover{
+    color: #FC02D8;
+}
+.facebook:hover{
+    color: #3B579D;
+}
+.twitter:hover{
+    color: #1DA0F1;
+}
+.youtube:hover{
+    color: #FF0000;
+}
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    background-color: #2e1c19;
+    color: #B3391C;
+    font-size: 0.9em;
+}
+.footer-bottom p {
+    margin: 0;
 }
