@@ -196,7 +196,8 @@ button:hover{
 }
 .header button{
     padding: 10px;
-    margin: 10px;
+    margin: 0;
+    text-decoration: none;
     border-radius: 5px;
     cursor: pointer;
     font-family: 'Lobster Two', cursive;
