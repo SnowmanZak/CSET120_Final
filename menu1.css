@@ -8,6 +8,17 @@ body{
     
 }
 
+.home{
+    font-size: large;
+    align-self: left;
+    background-color: rgba(140, 47, 47, 0.536);
+}
+
+.home:hover{
+    background-color: rgba(130, 91, 23, 0.673);
+    text-decoration: underline;
+}
+
 .menu{
     border: 20px solid black;
     margin-left: 300px;
@@ -87,7 +98,7 @@ background-color:rgb(207, 155, 72) ;
 
 }
 
-.btn:hover{
+.btn:hover, .btn-add:hover{
     background-color:rgb(207, 155, 72) ;
 }
 a{
@@ -96,9 +107,42 @@ a{
 }
 
 .btn-add{
+    align-self: center;
     font-size: medium;
     color: black;
     background-color: brown;
     border-radius: 40px;
     height: 30px;
+    width: 100px;
+    margin-bottom: 60px;
+}
+.row{
+    align-items: center;
+    display: flex;
+    justify-content: space-around;}
+
+.menu-items2{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.img2{
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    /* border: none; */
+    align-self: center;
+}
+
+.menu-logo2{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.logo-img{
+    border: none;
 }
