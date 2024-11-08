@@ -84,25 +84,71 @@ background-color:rgb(207, 155, 72) ;
 
 }
 
+<<<<<<< HEAD
+.order{
+=======
 
 .btn{
+>>>>>>> f78f4c54d745a47d1c1a76e70c39b1c4e84077af
     height:50px ;
     right: 600px;
     width: 300px;
     border-radius: 45px;
     font-size: larger;
-    color: black;
-    background-color: brown;
+    color: white;
+    background-color: #B3391C;
     position: fixed;
     bottom: 10px;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+<<<<<<< HEAD
+.order:hover{
+=======
 
 .btn:hover, .btn-add:hover{
+>>>>>>> f78f4c54d745a47d1c1a76e70c39b1c4e84077af
     background-color:rgb(207, 155, 72) ;
 }
 a{
     text-decoration: none;
+<<<<<<< HEAD
+    color: white;
+    
+
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    background-color: #B3391C;
+    color: white;
+    transition: background-color 0.3s;
+    border-radius: 50px;
+}
+
+.filter-btn.active {
+    background-color: #682110;
+}
+
+.hide {
+    display: none;
+}
+
+.filter-btn:hover{
+    background-color: #682110;
+    transition: 1s;
+}
+=======
     color: black;
 }
 
@@ -209,3 +255,4 @@ header{
     border: none;
     align-self: center;
 }
+>>>>>>> f78f4c54d745a47d1c1a76e70c39b1c4e84077af
