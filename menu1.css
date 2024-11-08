@@ -1,7 +1,4 @@
 body{
-
-    background-image:url(./OIP\ \(1\).jpg) ;
-     background-size: contain;
     background-image:url(images/OIP\ \(1\).jpg) ;
     background-size: contain;
 
@@ -148,4 +145,67 @@ a{
 
 .logo-img{
     border: none;
+}
+
+.cart-row{
+    align-self: center;
+    align-items: center;
+    width: 900px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.cart-quantity-input{
+width: 35px;
+}
+
+.btn-danger{
+    width: 100px;
+    background-color: rgb(179, 22, 22);
+    border-radius: 20px;
+    height: 40px;
+    border: none;
+}
+.btn-danger:hover{
+    background-color: rgba(208, 35, 15, 0.555);
+}
+
+.cart{
+    /* width: 900px; */
+    background-color: bisque;
+    /* height: 500px; */
+    justify-content: center;
+    
+}
+
+.bottom{
+    margin-right: 20px;
+    text-align: right;
+}
+
+.payment-meth{
+    align-items: center;
+    text-align: center;
+}
+
+.img3{
+    width: 50px;
+    height: auto;
+}
+
+header{
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    /* position: fixed; */
+}
+
+.logo-img2{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 180px;
+    height: auto;
+    border: none;
+    align-self: center;
 }
