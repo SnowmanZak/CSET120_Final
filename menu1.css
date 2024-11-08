@@ -1,7 +1,4 @@
 body{
-
-    background-image:url(./OIP\ \(1\).jpg) ;
-     background-size: contain;
     background-image:url(images/OIP\ \(1\).jpg) ;
     background-size: contain;
 
@@ -87,37 +84,74 @@ background-color:rgb(207, 155, 72) ;
 
 }
 
-
-.btn{
+.order{
     height:50px ;
     right: 600px;
     width: 300px;
     border-radius: 45px;
     font-size: larger;
-    color: black;
-    background-color: brown;
+    color: white;
+    background-color: #B3391C;
     position: fixed;
     bottom: 10px;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-.btn:hover, .btn-add:hover{
+.order:hover{
     background-color:rgb(207, 155, 72) ;
 }
 a{
     text-decoration: none;
-    color: black;
+    color: white;
+    
+
 }
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    background-color: #B3391C;
+    color: white;
+    transition: background-color 0.3s;
+    border-radius: 50px;
+}
+
+.filter-btn.active {
+    background-color: #682110;
+}
+
+.hide {
+    display: none;
+}
+
+.filter-btn:hover{
+    background-color: #682110;
+    transition: 1s;
+}
+
 
 .btn-add{
     align-self: center;
     font-size: medium;
-    color: black;
-    background-color: brown;
+    color: white;
+    background-color: #B3391C;
     border-radius: 40px;
     height: 30px;
     width: 100px;
     margin-bottom: 60px;
+}
+.btn-add:hover{
+    cursor: pointer;
+    background-color: #682110;
 }
 .row{
     align-items: center;
@@ -148,4 +182,86 @@ a{
 
 .logo-img{
     border: none;
+}
+
+.cart-row{
+    align-self: center;
+    align-items: center;
+    width: 900px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.cart-quantity-input{
+width: 35px;
+}
+
+.btn-danger{
+    width: 100px;
+    background-color: #B3391C;
+    color: white;
+    border-radius: 20px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+}
+.btn-danger:hover{
+    background-color: #682110;
+    transition: 0.5s;
+}
+
+.cart{
+    background-color: bisque;
+    justify-content: center;
+    
+}
+
+.bottom{
+    margin-right: 20px;
+    text-align: right;
+}
+
+.payment-meth{
+    align-items: center;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.img3{
+    width: 50px;
+    height: auto;
+}
+
+header{
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    /* position: fixed; */
+}
+
+.logo-img2{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 180px;
+    height: auto;
+    border: none;
+    align-self: center;
+}
+
+.back{
+    margin: 25px;
+    padding: 15px;
+    background-color: #B3391C;
+    color: white;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+}
+.back:hover{
+    background-color: #682110;
+    transition: 0.5s;
+}
+.quantity{
+    display: flex;
 }
