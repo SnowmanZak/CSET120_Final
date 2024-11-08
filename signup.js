@@ -8,8 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const guestButton = document.querySelector(".signup-button1");
 
     signupButton.addEventListener("click", function (event) {
-        event.preventDefault(); // Prevent form submission for custom handling
-
+        event.preventDefault();
         const username = usernameInput.value.trim();
         const email = emailInput.value.trim();
         const password = passwordInput.value;
@@ -31,17 +30,50 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        // If all validations pass, redirect to the welcome page or log the user in.
+       
         alert("Sign-up successful!");
-        // Redirect or call server-side code here
+       
     });
 
-    // Set up navigation for login and guest buttons
     loginButton.addEventListener("click", function () {
         window.location.href = "guestlog.html";
     });
 
     guestButton.addEventListener("click", function () {
         window.location.href = "guestlog.html";
+    });
+});
+document.addEventListener("DOMContentLoaded", function () {
+    const signupButton = document.querySelector(".signup-enter");
+    const usernameInput = document.querySelector("input[type='Username']");
+    const emailInput = document.querySelector("input[type='Email']");
+    const passwordInput = document.querySelector("input[type='Password']");
+    const retypePasswordInput = document.querySelector("input[type='Retype']");
+
+    signupButton.addEventListener("click", function (event) {
+        event.preventDefault(); 
+
+        const username = usernameInput.value.trim();
+        const email = emailInput.value.trim();
+        const password = passwordInput.value;
+        const retypePassword = retypePasswordInput.value;
+
+        if (!username || !email || !password || !retypePassword) {
+            alert("Please fill in all fields.");
+            return;
+        }
+
+        if (password !== retypePassword) {
+            alert("Passwords do not match.");
+            return;
+        }
+
+        
+        localStorage.setItem("username", username);
+        localStorage.setItem("email", email);
+        localStorage.setItem("password", password);
+
+        alert("Sign-up successful! You can now log in.");
+        window.location.href = "login.html";
     });
 });
