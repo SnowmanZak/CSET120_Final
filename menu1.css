@@ -84,12 +84,7 @@ background-color:rgb(207, 155, 72) ;
 
 }
 
-<<<<<<< HEAD
 .order{
-=======
-
-.btn{
->>>>>>> f78f4c54d745a47d1c1a76e70c39b1c4e84077af
     height:50px ;
     right: 600px;
     width: 300px;
@@ -103,17 +98,11 @@ background-color:rgb(207, 155, 72) ;
     justify-content: center;
     align-items: center;
 }
-<<<<<<< HEAD
 .order:hover{
-=======
-
-.btn:hover, .btn-add:hover{
->>>>>>> f78f4c54d745a47d1c1a76e70c39b1c4e84077af
     background-color:rgb(207, 155, 72) ;
 }
 a{
     text-decoration: none;
-<<<<<<< HEAD
     color: white;
     
 
@@ -148,9 +137,7 @@ a{
     background-color: #682110;
     transition: 1s;
 }
-=======
-    color: black;
-}
+
 
 .btn-add{
     align-self: center;
@@ -255,4 +242,3 @@ header{
     border: none;
     align-self: center;
 }
->>>>>>> f78f4c54d745a47d1c1a76e70c39b1c4e84077af
