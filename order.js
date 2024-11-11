@@ -77,4 +77,5 @@ function ready() {
 
 //     // Initialize cart display on page load
 //     updateCartDisplay();
-// });
+// });'
+
