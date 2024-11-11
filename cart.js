@@ -1,4 +1,4 @@
-if (document.readyState == 'loading') {
+if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', ready);
 } else {
     ready();
@@ -6,20 +6,29 @@ if (document.readyState == 'loading') {
 
 function ready() {
     let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-    const cartContainer = document.querySelector('.cart');
+    const cartContainer = document.querySelector('.cart-items'); // Changed to .cart-items
 
     if (cartContainer) {
         cartItems.forEach(item => {
             const cartRow = createCartRow(item);
             cartContainer.appendChild(cartRow);
 
-            cartRow.querySelector('.cart-quantity-input').addEventListener('input', updateCartTotal);
+            const quantityInput = cartRow.querySelector('.cart-quantity-input');
+            quantityInput.addEventListener('input', () => {
+                updateQuantityInCart(item.name, quantityInput.value);
+                updateCartTotal();
+            });
+
             cartRow.querySelector('.btn-danger').addEventListener('click', function () {
                 removeItemFromCart(item, cartRow);
             });
         });
     }
-    document.querySelector('.tip-input').addEventListener('input', updateCartTotal);
+
+    const tipInput = document.querySelector('.tip-input');
+    if (tipInput) {
+        tipInput.addEventListener('input', updateCartTotal);
+    }
 
     updateCartTotal();
 }
@@ -52,16 +61,38 @@ function removeItemFromCart(item, cartRow) {
     updateCartTotal();
 }
 
+function updateQuantityInCart(itemName, newQuantity) {
+    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    cartItems = cartItems.map(cartItem =>
+        cartItem.name === itemName ? { ...cartItem, quantity: newQuantity } : cartItem
+    );
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+}
+
 function updateCartTotal() {
     let total = 0;
+
     document.querySelectorAll('.cart-row').forEach(row => {
-        const price = parseFloat(row.querySelector('.price').textContent.replace('$', ''));
-        const quantity = parseInt(row.querySelector('.cart-quantity-input').value);
-        total += price * quantity;
+        const priceText = row.querySelector('.price').textContent.replace('$', '');
+        const price = parseFloat(priceText);
+
+        const quantityInput = row.querySelector('.cart-quantity-input');
+        const quantity = parseFloat(quantityInput.value);
+
+        if (!isNaN(price) && !isNaN(quantity)) {
+            total += price * quantity;
+        }
     });
 
-    const tipAmount = parseFloat(document.querySelector('.tip-input').value.replace('$', '')) || 0;
+    const tipInputValue = document.querySelector('.tip-input')?.value || '0';
+    const tipAmount = parseFloat(tipInputValue.replace('$', '')) || 0;
+
     total += tipAmount;
 
-    document.querySelector('.total-price').textContent = `$${total.toFixed(2)}`;
+    const totalPriceElement = document.querySelector('.total-price');
+    if (totalPriceElement) {
+        totalPriceElement.textContent = `$${total.toFixed(2)}`;
+    } else {
+        console.error("Element with class '.total-price' not found.");
+    }
 }
