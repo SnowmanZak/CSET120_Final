@@ -13,10 +13,13 @@
         <img src="images/logo.webp" alt="">
         <h1>Knead For Speed</h1>
         <div class="button_group">
-            <a href="logPage.html"><button onclick="" class="logIn">Log In</button></a>
-            <a href="signpage.html"><button onclick="" class="signUp">Sign Up</button></a>
+            
+            <span id="username-display" class="username" style="display: none;"></span>
+            <a href="logPage.html" id="login-link"><button id="login-button" class="logIn">Log In</button></a>
+            <a href="signpage.html" id="signup-link"><button id="signup-button" class="signUp">Sign Up</button></a>
         </div>
     </header>
+    
     <nav class="nav_bar">
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -81,7 +84,8 @@
             <p>&copy; 2023 Knead for Speed. All rights reserved.</p>
         </div>
     </footer>
-    
+    <script src="index.js"></script>
+    <script src="guest.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
