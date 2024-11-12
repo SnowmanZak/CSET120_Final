@@ -373,5 +373,32 @@ nav a:hover{
     font-size: 0.9em;
 }
 .footer-bottom p {
-    margin: 0;
+    margin: 0; 
+}
+.remove{
+    background-color: red;
+    color: white;
+    width: 150px;
+    height: 30px;
+    border-radius: 15px;
+    margin-left: 70px;
+    margin-top: -40px;
+    
+}
+.add-item{
+    color: white;
+    background-color: rgb(15, 162, 15);
+    width: 100px;
+    height: 30px;
+    border-radius: 15px;
+}
+.menu2{
+    box-shadow: 2px 5px 5px 5px black;
+   
+    margin-left: 300px;
+    margin-right: 300px;
+    background-color:antiquewhite;
+    align-items: center;
+    text-align: center;
+    height: 5600px;
 }
