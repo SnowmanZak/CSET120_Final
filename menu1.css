@@ -288,3 +288,36 @@ header{
     display: flex;
     justify-content: space-around;
 }
+
+.order-receipt{
+    align-self: center;
+    background-image: url(./images/OIP.jpg);
+    background-size: cover;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 20px;
+    margin: auto;
+    height: auto;
+    border: 2px black dashed;
+
+}
+
+.receipt{
+    border: #B3391C 4px solid;
+    align-self: center;
+    background-color: bisque;
+    width: 700px;
+
+}
+
+.order-name{
+    color: #B3391C;
+}
+
+.menu-item-details4{
+    display: flex;
+    justify-content: space-around;
+    margin-left: 10px;
+}
