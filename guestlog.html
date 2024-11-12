@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -15,15 +16,19 @@
         <br><br>
         <div>
            <div class="Guest-info">
-            <h3 class="Orders">Name of Guest </h3>
+            <h3 class="orders">Name of Guest</h3>
             <br>
-            <input type="Enter Name " class="guest-inputs">
-            <button onclick="" class="guest-enter"><a href="index.html">Enter</a></button>
+            <input type="text" id="guestName" class="guest-inputs" placeholder="Enter Name">
+            <button onclick="enterGuest()"  class="guest-enter" ><a href="index.html">Enter</a></button>
            </div>
-           <div class="guest-buttons">
-            <button class="button"><a href="logPage.html" class="link-color">Login</a></button>
-            <p class="or">or </p>
-            <button class="button"><a href="signpage.html"class="link-color">Sign Up</a></button>
+           <div class="guest-buttons" id="auth-buttons">
+               <button class="button"><a href="logPage.html" class="link-color">Login</a></button>
+               <p class="or">or</p>
+               <button class="button"><a href="signpage.html" class="link-color">Sign Up</a></button>
+           </div>
+           <div id="welcome-message" style="display: none;">
+               <h3>Welcome, <span id="displayName"></span>!</h3>
+               <a href="index.html">Go to Home</a>
            </div>
         </div>
     </div>
