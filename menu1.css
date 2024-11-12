@@ -330,7 +330,7 @@ header{
     linear-gradient(135deg, transparent 75%, antiquewhite 75%);
     background-size:25px 25px;
     background-position:0 0, 12.5px 0, 12.5px -12.5px, 0px 12.5px; 
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     width: 100%;
 }
 .checkout_body{
