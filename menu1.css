@@ -1,5 +1,5 @@
 body{
-    background-image:url(images/OIP\ \(1\).jpg) ;
+    background-image:url(images/il_570xN.6077565577_scbk.avif) ;
     background-size: contain;
 
     background-attachment: fixed;
@@ -23,8 +23,8 @@ body{
     text-decoration: underline;
 }
 
-.menu{
-    border: 20px solid black;
+.menu{box-shadow: 2px 5px 5px 5px black;
+   
     margin-left: 300px;
     margin-right: 300px;
     background-color:antiquewhite;
@@ -284,6 +284,9 @@ header{
 }
 .quantity{
     display: flex;
+}
+.Orders{
+    margin-left: 130px;
 }
 .checkout {
     display: flex;
