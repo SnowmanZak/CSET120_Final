@@ -202,7 +202,7 @@ button:hover{
     font-family: 'Lobster Two', cursive;
 }
 .header button:last-child{
-    margin-right: 60px;
+    margin-right: 40px;
 }
 .header img{
     margin-left: 70px;
@@ -355,15 +355,19 @@ nav a:hover{
 }
 .insta:hover{
     color: #FC02D8;
+    transition: 1s;
 }
 .facebook:hover{
     color: #3B579D;
+    transition: 1s;
 }
 .twitter:hover{
     color: #1DA0F1;
+    transition: 1s;
 }
 .youtube:hover{
     color: #FF0000;
+    transition: 1s;
 }
 .footer-bottom {
     text-align: center;

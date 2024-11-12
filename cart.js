@@ -45,7 +45,7 @@ function createCartRow(item) {
             </div>
         </div>
         <div class="quantity">
-            <input class="cart-quantity-input" type="number" value="${item.quantity}">
+            <input class="cart-quantity-input" type="number" value="${item.quantity}" min="1">
             <button class="btn2 btn-danger" type="button">REMOVE</button>
         </div>
     `;
@@ -88,6 +88,8 @@ function updateCartTotal() {
     const tipAmount = parseFloat(tipInputValue.replace('$', '')) || 0;
 
     total += tipAmount;
+    
+    localStorage.setItem('cartTip', tipAmount);
 
     const totalPriceElement = document.querySelector('.total-price');
     if (totalPriceElement) {
