@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let etaMinutes = 0;
     const minutesPerItem = 3;
 
-    // Display each cart item
     cartItems.forEach(item => {
         const price = parseFloat(item.price.replace('$', ''));
         const quantity = parseFloat(item.quantity);
@@ -24,21 +23,17 @@ document.addEventListener('DOMContentLoaded', () => {
         checkoutContainer.appendChild(itemRow);
     });
 
-    // Display items total and ETA
     document.querySelector('.items-total-price').textContent = `$${itemsTotal.toFixed(2)}`;
     document.querySelector('.eta-time').textContent = `${etaMinutes} minutes`;
 
-    // Update total with tip
     function updateTotal() {
         const tipAmount = parseFloat(document.getElementById('tip-amount').value) || 0;
         const total = itemsTotal + tipAmount;
         document.querySelector('.total-price').textContent = `$${total.toFixed(2)}`;
     }
 
-    // Listen for tip input changes
     document.getElementById('tip-amount').addEventListener('input', updateTotal);
 
-    // Payment method form
     document.getElementById('payment').addEventListener('change', function() {
         const paymentFormContainer = document.getElementById('payment-form-container');
         paymentFormContainer.innerHTML = '';
@@ -67,6 +62,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Initialize total with current tip value
     updateTotal();
 });
