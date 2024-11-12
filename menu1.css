@@ -213,7 +213,7 @@ width: 35px;
 .cart{
     background-color: bisque;
     justify-content: center;
-    
+    padding-bottom: 20px;
 }
 
 .bottom{
@@ -264,4 +264,185 @@ header{
 }
 .quantity{
     display: flex;
+}
+.checkout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    padding: 10px 20px;
+    background-color: #B3391C;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none; 
+}
+.checkout .card {
+    margin-right: 8px;
+    font-size: 20px; 
+}
+.checkout:hover {
+    background-color: #682110;
+}
+.checkout_background{
+    background-image: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lobster Two', cursive;
+}
+.checkout_header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image:
+    linear-gradient(45deg, antiquewhite 25%, transparent 25%), 
+    linear-gradient(135deg, antiquewhite 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, antiquewhite 75%),
+    linear-gradient(135deg, transparent 75%, antiquewhite 75%);
+    background-size:25px 25px;
+    background-position:0 0, 12.5px 0, 12.5px -12.5px, 0px 12.5px; 
+    padding-bottom: 10px;
+}
+.checkout_body{
+    background-color: antiquewhite;
+    width: 100%;
+    height: auto;
+}
+.checkout_body a{
+    text-decoration: none;
+}
+.checkout_back, .checkout_home{
+    background-color: #B3391C;
+    color: white;
+    padding: 15px;
+    border-radius: 50px;
+    border: none;
+    margin: 10px;
+}
+.checkout_back:hover, .checkout_home:hover{
+    background-color: #682110;
+    transition: 1s;
+}
+.checkout_back{
+    margin-left: 20px;
+}
+.checkout_home{
+    margin-right: 20px;
+}
+.checkout_header h1{
+    font-style: italic;
+    font-size: 50px;
+    color: #682110;
+    margin-top: 20px;
+}
+.button_group{
+    display: flex;
+}
+.page_logo{
+    margin-left: 70px;
+    height: auto;
+    width: 100px;
+    border-radius: 50px;
+    border: #682110 solid 1px;
+}
+.checkout_body{
+    background-color: antiquewhite;
+    margin-top: -20px;
+    height: auto;
+    color: #B3391C;
+}
+.checkout_body h2{
+    font-style: italic;
+    color: #682110;
+    margin-left: 20px;
+}
+.checkout_body .total{
+    margin-left: 20px;
+}
+.checkout-items { width: 100%; margin-bottom: 20px; 
+}
+.cart-row { 
+      display: grid;
+      margin-left: 40px;
+      grid-template-columns: 2fr 1fr 1fr;
+      padding: 10px 0;
+
+}
+.cart-header, .cart-row {
+      font-weight: bold;
+      text-align: left;
+}
+.total { font-weight: bold; 
+}
+.footer {
+    background-image:
+    linear-gradient(45deg, antiquewhite 25%, transparent 25%), 
+    linear-gradient(135deg, antiquewhite 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, antiquewhite 75%),
+    linear-gradient(135deg, transparent 75%, antiquewhite 75%);
+    background-size:25px 25px;
+    background-position:0 0, 12.5px 0, 12.5px -12.5px, 0px 12.5px; 
+    color: #2e1c19;
+    padding-bottom: 20px 0;
+    font-family: 'Lobster Two', cursive;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 50px;
+    flex-wrap: wrap;
+}
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+.footer-section h3 {
+    font-size: 1.5em;
+    color: #682110;
+    margin-bottom: 10px;
+}
+.footer-section p {
+    font-size: 1em;
+    line-height: 1.6;
+    font-weight: 800;
+    color: #682110;
+}
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+.social-icons a{
+    text-decoration: none;
+    color: #B3391C;
+    font-size: 25px;
+}
+.insta:hover{
+    color: #FC02D8;
+    transition: 1s;
+}
+.facebook:hover{
+    color: #3B579D;
+    transition: 1s;
+}
+.twitter:hover{
+    color: #1DA0F1;
+    transition: 1s;
+}
+.youtube:hover{
+    color: #FF0000;
+    transition: 1s;
+}
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    background-color: #2e1c19;
+    color: #B3391C;
+    font-size: 0.9em;
+}
+.footer-bottom p {
+    margin: 0;
 }
