@@ -5,6 +5,10 @@ body{
     background-attachment: fixed;
     align-items: center;
     font-family: cursive;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    text-align: center;
     
 }
 
@@ -213,12 +217,22 @@ width: 35px;
 .cart{
     background-color: bisque;
     justify-content: center;
+<<<<<<< HEAD
     padding-bottom: 20px;
+=======
+    width: 1100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+        
+>>>>>>> 64dc7455b572e618b56dcf6e6f0da5578e14ce67
 }
 
 .bottom{
     margin-right: 20px;
-    text-align: right;
+    align-self: flex-end;
 }
 
 .payment-meth{
@@ -229,7 +243,7 @@ width: 35px;
 
 .img3{
     width: 50px;
-    height: auto;
+    height: 55px;
 }
 
 header{
@@ -238,7 +252,7 @@ header{
     align-items: center;
     /* position: fixed; */
 }
-
+         
 .logo-img2{
     display: block;
     margin-left: auto;
@@ -249,6 +263,14 @@ header{
     align-self: center;
 }
 
+.home1{ margin-left: 10px;
+
+}
+
+.home1:hover{
+    background-color: rgba(164, 58, 58, 0.427);
+}
+
 .back{
     margin: 25px;
     padding: 15px;
@@ -257,6 +279,7 @@ header{
     border-radius: 50px;
     border: none;
     cursor: pointer;
+   
 }
 .back:hover{
     background-color: #682110;
@@ -265,6 +288,7 @@ header{
 .quantity{
     display: flex;
 }
+<<<<<<< HEAD
 .checkout {
     display: flex;
     align-items: center;
@@ -446,3 +470,42 @@ header{
 .footer-bottom p {
     margin: 0;
 }
+=======
+.back-1{
+    display: flex;
+    justify-content: space-around;
+}
+
+.order-receipt{
+    align-self: center;
+    background-image: url(./images/OIP.jpg);
+    background-size: cover;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 20px;
+    margin: auto;
+    height: auto;
+    border: 2px black dashed;
+
+}
+
+.receipt{
+    border: #B3391C 4px solid;
+    align-self: center;
+    background-color: bisque;
+    width: 700px;
+
+}
+
+.order-name{
+    color: #B3391C;
+}
+
+.menu-item-details4{
+    display: flex;
+    justify-content: space-around;
+    margin-left: 10px;
+}
+>>>>>>> 64dc7455b572e618b56dcf6e6f0da5578e14ce67
