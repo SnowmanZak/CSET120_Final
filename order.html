@@ -8,6 +8,7 @@
     <link rel="icon" href="images/image-removebg-preview_4.webp"image/x-icon">
 </head>
 <body>
+    <div class="page">
     <div class="menu">
         <a class="home" href="index.html"><ion-icon name="arrow-back-outline"></ion-icon>Back to home</a>
         <div class="menu-logo2">
@@ -22,7 +23,7 @@
             <button class="filter-btn" data-filter="refreshments">Lattes</button>
             <button class="filter-btn" data-filter="pit-stop-pastries">Pastries</button>
             <button class="filter-btn" data-filter="fast-lane-breads">Breads</button>
-            <button class="filter-btn" data-filter="high-gear-sandwhiches">Sandwichs</button>
+            <button class="filter-btn" data-filter="high-gear-sandwhiches">Sandwiches</button>
             <button class="filter-btn" data-filter="quick-fix-breakfast">Breakfast</button>
         </div>
          <div class="menu-items-con">
@@ -37,7 +38,7 @@
                                         <p class="item-name"><strong>Nitro Nitro Cold Brew</strong><br>Smooth cold brew, double nitro-charged for maximum speed</p>
                                         <p class="price">$4.50</p>
                                 </div>
-                                <button class="btn-add">Add To cart</button>
+                                <button class="btn-add" onclick="addToCart()">Add To cart</button>
                             </div>
 
                             <div class= "menu-items2" data-category="coffee">
@@ -46,7 +47,7 @@
                                         <p class="item-name"><strong>Pit Stop Espresso Shot</strong><br>A quick jolt of energy to keep you going.</p>
                                         <p class="price">$2.25</p>
                                 </div>
-                                <button class="btn-add">Add To cart</button>
+                               <button class="btn-add" onclick="addToCart()">Add To cart</button>
                             </div>
 
                             <div class= "menu-items2" data-category="coffee">
@@ -55,7 +56,7 @@
                                         <p class="item-name"><strong>Turbocharged Latte</strong> <br>Steamed milk and espresso with options like vanilla, caramel, or mocha.</p>
                                         <p class="price">$4.25</p>
                                 </div>
-                                <button class="btn-add">Add To cart</button>
+                                <button class="btn-add" onclick="addToCart()">Add To cart</button>
                             </div>
                             
                            </div>
@@ -67,7 +68,7 @@
                                         <p class="item-name"><strong>Fast Lane Flat White</strong> <br>Bold espresso and velvety milk for the serious coffee fan.</p>
                                         <p class="price">$4.00</p>
                                 </div>
-                                <button class="btn-add">Add To cart</button>
+                               <button class="btn-add" onclick="addToCart()">Add To cart</button>
                             </div>
 
                             <div class= "menu-items2" data-category="coffee">
@@ -76,7 +77,7 @@
                                         <p class="item-name"><strong>Fuel-Up Cappuccino</strong><br> A balanced shot of espresso with a light foam</p>
                                         <p class="price">$3.75</p>
                                 </div>
-                                <button class="btn-add">Add To cart</button>
+                               <button class="btn-add" onclick="addToCart()">Add To cart</button>
                             </div>
                            </div>
 
@@ -92,7 +93,7 @@
                                         <p class="item-name"> <strong>Peanut Butter Pit Stop</strong><br> Peanut butter, banana, and protein powder for a hearty boost</p>
                                         <p class="price"> $6.50</p>
                                 </div>
-                                <button class="btn-add">Add To cart</button>
+                                <button class="btn-add" onclick="addToCart()">Add To cart</button>
                             </div>
 
                             <div class= "menu-items2" data-category="smoothies">
@@ -101,7 +102,7 @@
                                         <p class="item-name"> <strong>Mango Madness</strong><br>Mango, pineapple, and a hint of lime juice for a tropical kick</p>
                                         <p class="price">$6.25</p>
                                 </div>
-                                <button class="btn-add">Add To cart</button>
+                                <button class="btn-add" onclick="addToCart()">Add To cart</button>
                             </div>
                             <div class= "menu-items2" data-category="smoothies">
                                 <img class="img2" src="https://i.pinimg.com/564x/43/67/26/43672651eb9ddcc90c55042355dd0d85.jpg" alt="" srcset="">
@@ -109,7 +110,7 @@
                                         <p class="item-name"> <strong>Turbocharged Chocolate</strong><br> Almond milk, chocolate protein, and espresso for a protein-packed mocha</p>
                                         <p class="price">$6.75</p>
                                 </div>
-                                <button class="btn-add">Add To cart</button>
+                                <button class="btn-add" onclick="addToCart()">Add To cart</button>
                             </div>
                            </div>
                         </div>
@@ -123,7 +124,7 @@
                                             <p class="item-name"><strong>Pit Crew Lemonade</strong><br> Fresh-squeezed lemonade served with a twist of mint.</p>
                                             <p class="price">$3.50</p>
                                     </div>
-                                    <button class="btn-add">Add To cart</button>
+                                   <button class="btn-add" onclick="addToCart()">Add To cart</button>
                                 </div>
     
                                 <div class= "menu-items2" data-category="refreshments">
@@ -132,7 +133,7 @@
                                             <p class="item-name"> <strong>Citrus Speed Tea</strong><br> Iced tea with lemon, orange, and a hint of ginger.</p>
                                             <p class="price">$3.75</p>
                                     </div>
-                                    <button class="btn-add">Add To cart</button>
+                                    <button class="btn-add" onclick="addToCart()">Add To cart</button>
                                 </div>
     
                                 <div class= "menu-items2" data-category="refreshments">
@@ -184,8 +185,8 @@
                                 <div class= "menu-items2" data-category="pit-stop-pastries">
                                     <img class="img2" src="https://i.pinimg.com/564x/a3/1a/c1/a31ac17ad28ab1e3d3a0bb53b1d13891.jpg" alt="" srcset="">
                                     <div class="menu-item-details2">
-                                            <p class="item-name"> <strong>Turbo Turnovers</strong><br>Flaky turnovers filled with apple, cherry, or chocolate</p>
-                                            <p class="price">$2.75 each</p>
+                                            <p class="item-name"> <strong>Turbo Turnovers</strong><br>Flaky turnovers filled with apple, cherry, or chocolate(each)</p>
+                                            <p class="price">$2.75</p>
                                     </div>
                                     <button class="btn-add">Add To cart</button>
                                 </div>
@@ -193,8 +194,8 @@
                                 <div class= "menu-items2" data-category="pit-stop-pastries">
                                     <img class="img2" src="https://i.pinimg.com/736x/09/76/b6/0976b664268723a8d3167936295162ca.jpg" alt="" srcset="">
                                     <div class="menu-item-details2">
-                                            <p class="item-name"> <strong>Nitro Cinnamon Rolls</strong><br>Giant, gooey cinnamon rolls with extra icing.</p>
-                                            <p class="price">$3.50 each</p>
+                                            <p class="item-name"> <strong>Nitro Cinnamon Rolls</strong><br>Giant, gooey cinnamon rolls with extra icing.(each)</p>
+                                            <p class="price">$3.50</p>
                                     </div>
                                     <button class="btn-add">Add To cart</button>
                                 </div>
@@ -203,7 +204,7 @@
                                     <img class="img2" src="https://i.pinimg.com/736x/b1/57/c8/b157c844a0e000474b27f2432b95f243.jpg" alt="" srcset="">
                                     <div class="menu-item-details2">
                                             <p class="item-name"> <strong>Pit Crew Croissants</strong><br>Classic, chocolate, or almond croissants, light and buttery. </p>
-                                            <p class="price">$2.25 (Classic), $2.75 (Chocolate or Almond)</p>
+                                            <p class="price">$2.25</p>
                                     </div>
                                     <button class="btn-add">Add To cart</button>
                                 </div>
@@ -213,8 +214,8 @@
                         <div class= "menu-items2" data-category="pit-stop-pastries">
                             <img class="img2" src="https://i.pinimg.com/564x/de/ec/49/deec499058757f9ee38c67c8074a1796.jpg" alt="" srcset="">
                             <div class="menu-item-details2">
-                                    <p class="item-name"> <strong>Speedy Scones </strong><br>Choose from blueberry, cranberry-orange, or cheddar-chive.</p>
-                                    <p class="price">$2.50 each</p>
+                                    <p class="item-name"> <strong>Speedy Scones </strong><br>Choose from blueberry, cranberry-orange, or cheddar-chive.(each)</p>
+                                    <p class="price">$2.50</p>
                             </div>
                             <button class="btn-add">Add To cart</button>
                         </div>
@@ -222,8 +223,8 @@
                         <div class= "menu-items2" data-category="pit-stop-pastries">
                             <img class="img2" src="https://i.pinimg.com/564x/39/de/59/39de59254d0aa1ab16cb21a56712762e.jpg" alt="" srcset="">
                             <div class="menu-item-details2">
-                                    <p class="item-name"> <strong>Drag Race Donuts</strong><br> Variety of classic, filled, and frosted donuts in the fast lane.</p>
-                                    <p class="price">$1.75 each, $9.50 for half dozen</p>
+                                    <p class="item-name"> <strong>Drag Race Donuts</strong><br> Variety of classic, filled, and frosted donuts in the fast lane. (each)</p>
+                                    <p class="price">$1.75</p>
                             </div>
                             <button class="btn-add">Add To cart</button>
                         </div>
@@ -236,16 +237,16 @@
                             <div class= "menu-items2" data-category="fast-lane-breads">
                                 <img class="img2" src="https://i.pinimg.com/564x/3f/8d/5f/3f8d5f2b66ca7675d7a7ca69d3c3c63f.jpg" alt="" srcset="">
                                 <div class="menu-item-details2">
-                                        <p class="item-name"> <strong>Quick Pit Pita</strong><br>Soft pita bread with a choice of garlic, rosemary, or plain.</p>
-                                        <p class="price">$2.50 each</p>
+                                        <p class="item-name"> <strong>Quick Pit Pita</strong><br>Soft pita bread with a choice of garlic, rosemary, or plain. (each)</p>
+                                        <p class="price">$2.50</p>
                                 </div>
                                 <button class="btn-add">Add To cart</button>
                             </div>
                             <div class= "menu-items2" data-category="fast-lane-breads">
                                 <img class="img2" src="https://i.pinimg.com/564x/73/93/94/739394e684f07561a84ec983e0e03cf0.jpg" alt="" srcset="">
                                 <div class="menu-item-details2">
-                                        <p class="item-name"> <strong>Full Throttle Focaccia</strong><br>Olive oil focaccia topped with rosemary, olives, or sundried tomatoes</p>
-                                        <p class="price">$4.00 per slice</p>
+                                        <p class="item-name"> <strong>Full Throttle Focaccia</strong><br>Olive oil focaccia topped with rosemary, olives, or sundried tomatoes (per slice)</p>
+                                        <p class="price">$4.00</p>
                                 </div>
                                 <button class="btn-add">Add To cart</button>
                             </div>
@@ -253,8 +254,8 @@
                             <div class= "menu-items2" data-category="fast-lane-breads">
                                 <img class="img2" src="https://i.pinimg.com/564x/5c/bd/62/5cbd62c3377e01e91c3ee9debd9a14ba.jpg" alt="" srcset="">
                                 <div class="menu-item-details2">
-                                        <p class="item-name"> <strong>Revved-Up Rye</strong><br>Fresh rye bread with a caraway kick.</p>
-                                        <p class="price">$5.00 per loaf</p>
+                                        <p class="item-name"> <strong>Revved-Up Rye</strong><br>Fresh rye bread with a caraway kick. (per loaf)</p>
+                                        <p class="price">$5.00</p>
                                 </div>
                                 <button class="btn-add">Add To cart</button>
                             </div>
@@ -264,8 +265,8 @@
                             <div class= "menu-items2" data-category="fast-lane-breads">
                                 <img class="img2" src="https://i.pinimg.com/564x/2b/33/54/2b3354c17fa9ecea377221984ef288ce.jpg" alt="" srcset="">
                                 <div class="menu-item-details2">
-                                        <p class="item-name"> <strong>Rapid-Fire Rolls</strong><br>Soft rolls in sourdough, whole wheat, or everything seasoning</p>
-                                        <p class="price">$1.25 each, $6.00 for half dozen</p>
+                                        <p class="item-name"> <strong>Rapid-Fire Rolls</strong><br>Soft rolls in sourdough, whole wheat, or everything seasoning (each)</p>
+                                        <p class="price">$1.25</p>
                                 </div>
                                 <button class="btn-add">Add To cart</button>
                             </div>
@@ -273,8 +274,8 @@
                             <div class= "menu-items2" data-category="fast-lane-breads">
                                 <img class="img2" src="https://i.pinimg.com/564x/7e/8e/fa/7e8efa293918c1a375f593d5fefff274.jpg" alt="" srcset="">
                                 <div class="menu-item-details2">
-                                        <p class="item-name"> <strong>Speed Loaf</strong><br>Mini loaves in flavors like jalapeño-cheddar, classic sourdough, or multigrain.</p>
-                                        <p class="price">$4.50 each</p>
+                                        <p class="item-name"> <strong>Speed Loaf</strong><br>Mini loaves in flavors like jalapeño-cheddar, classic sourdough, or multigrain. (each)</p>
+                                        <p class="price">$4.50</p>
                                 </div>
                                 <button class="btn-add">Add To cart</button>
                             </div>
@@ -339,8 +340,8 @@
                         <div class= "menu-items2" data-category="quick-fix-breakfast">
                             <img class="img2" src="https://i.pinimg.com/736x/d1/19/5f/d1195f699515dabb60cd4a823ce22808.jpg" alt="" srcset="">
                             <div class="menu-item-details2">
-                                    <p class="item-name"> <strong>Green Light Bagels</strong><br>Fresh bagels with choice of cream cheese flavors: plain, chive, or veggie</p>
-                                    <p class="price">$1.50 (bagel only), +$0.50 for cream cheese</p>
+                                    <p class="item-name"> <strong>Green Light Bagels</strong><br>Fresh bagels with choice of cream cheese flavors: plain, chive, or veggie (bagel only), +$0.50 for cream cheese</p>
+                                    <p class="price">$1.50</p>
                             </div>
                             <button class="btn-add">Add To cart</button>
                         </div>
@@ -376,7 +377,7 @@
                                         <p class="item-name"> <strong>Overdrive Oats </strong><br> Overnight oats with fruit, nuts, and a drizzle of honey.</p>
                                         <p class="price">$4.75</p>
                                 </div>
-                                <button class="btn-add">Add To cart</button>
+                                <button class="btn-add" onclick="addToCart()">Add To cart</button>
                             </div>
                         </div>
                     </div>
