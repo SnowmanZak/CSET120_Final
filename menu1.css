@@ -15,11 +15,11 @@ body{
 .home{
     font-size: large;
     align-self: left;
-    background-color: rgba(140, 47, 47, 0.536);
+    background-color: #B3391C;
 }
 
 .home:hover{
-    background-color: rgba(130, 91, 23, 0.673);
+    background-color: #682110;
     text-decoration: underline;
 }
 
@@ -84,7 +84,7 @@ img {
 
 .section1:hover{
 color:black ;
-background-color:rgb(207, 155, 72) ;
+background-color:#682110;
 
 }
 
@@ -103,7 +103,8 @@ background-color:rgb(207, 155, 72) ;
     align-items: center;
 }
 .order:hover{
-    background-color:rgb(207, 155, 72) ;
+    background-color:#682110;
+    transition: 0.5s;
 }
 a{
     text-decoration: none;
@@ -396,10 +397,11 @@ header{
 .checkout_body h2{
     font-style: italic;
     color: #682110;
+    text-align: left;
     margin-left: 20px;
 }
-.checkout_body .total{
-    margin-left: 20px;
+.checkout_body{
+    text-align: left;
 }
 .checkout-items { width: 100%; margin-bottom: 20px; 
 }
@@ -408,13 +410,17 @@ header{
       margin-left: 40px;
       grid-template-columns: 2fr 1fr 1fr;
       padding: 10px 0;
-
 }
 .cart-header, .cart-row {
       font-weight: bold;
-      text-align: left;
 }
-.total { font-weight: bold; 
+.total { 
+    font-weight: bold; 
+    margin-left: 10px;
+}
+.checkout_body label{
+    margin-left: 10px;
+    font-weight: bold;
 }
 .footer {
     background-image:
@@ -526,9 +532,26 @@ header{
     justify-content: space-around;
     margin-left: 10px;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 
 }
 
 >>>>>>> 012cecb44095629e429085664e1f7759e5947484
+=======
+}
+.proceed-button{
+    background-color: #B3391C;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 10px;
+}
+.proceed-button:hover{
+    background-color: #682110;
+    transition: 0.5s;
+}
+
+
+>>>>>>> 5088722a42343a0c50a9a886a6a8458d47089f55
