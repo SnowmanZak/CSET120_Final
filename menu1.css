@@ -223,9 +223,8 @@ width: 35px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    
-        
+    text-align: center    
+     
 }
 
 .bottom{
@@ -286,6 +285,7 @@ header{
 .quantity{
     display: flex;
 }
+
 .Orders{
     margin-left: 130px;
 }
@@ -482,6 +482,7 @@ header{
 .footer-bottom p {
     margin: 0;
 }
+
 .back-1{
     display: flex;
     justify-content: space-around;
@@ -518,6 +519,7 @@ header{
     display: flex;
     justify-content: space-around;
     margin-left: 10px;
+<<<<<<< HEAD
 }
 .proceed-button{
     background-color: #B3391C;
@@ -530,3 +532,8 @@ header{
     background-color: #682110;
     transition: 0.5s;
 }
+=======
+
+}
+
+>>>>>>> 60941706ec3968a668b70551a4fa8dbf31d1f057
