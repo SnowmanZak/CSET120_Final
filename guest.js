@@ -7,7 +7,7 @@ document.getElementById("guestEnterButton").addEventListener("click", function (
         localStorage.setItem("guestName", guestName);
 
     
-        window.location.href = "index.html";
+        window.location.href = "order.html";
     } else {
         alert("Please enter your name.");
     }

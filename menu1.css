@@ -223,8 +223,7 @@ width: 35px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center    
-     
+    text-align: center;   
 }
 
 .bottom{
@@ -482,7 +481,6 @@ header{
 .footer-bottom p {
     margin: 0;
 }
-
 .back-1{
     display: flex;
     justify-content: space-around;
@@ -519,6 +517,9 @@ header{
     display: flex;
     justify-content: space-around;
     margin-left: 10px;
+
+}
+
 }
 .proceed-button{
     background-color: #B3391C;
