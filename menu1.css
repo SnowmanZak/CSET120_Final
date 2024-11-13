@@ -222,9 +222,14 @@ width: 35px;
     display: flex;
     flex-direction: column;
     align-items: center;
+<<<<<<< HEAD
     text-align: center;
     
         
+=======
+    text-align: center    
+     
+>>>>>>> 012cecb44095629e429085664e1f7759e5947484
 }
 
 .bottom{
@@ -285,6 +290,10 @@ header{
 .quantity{
     display: flex;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 012cecb44095629e429085664e1f7759e5947484
 .Orders{
     margin-left: 130px;
 }
@@ -476,6 +485,10 @@ header{
 .footer-bottom p {
     margin: 0;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 012cecb44095629e429085664e1f7759e5947484
 .back-1{
     display: flex;
     justify-content: space-around;
@@ -512,4 +525,10 @@ header{
     display: flex;
     justify-content: space-around;
     margin-left: 10px;
+<<<<<<< HEAD
 }
+=======
+
+}
+
+>>>>>>> 012cecb44095629e429085664e1f7759e5947484
