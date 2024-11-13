@@ -15,11 +15,11 @@ body{
 .home{
     font-size: large;
     align-self: left;
-    background-color: rgba(140, 47, 47, 0.536);
+    background-color: #B3391C;
 }
 
 .home:hover{
-    background-color: rgba(130, 91, 23, 0.673);
+    background-color: #682110;
     text-decoration: underline;
 }
 
@@ -84,7 +84,7 @@ img {
 
 .section1:hover{
 color:black ;
-background-color:rgb(207, 155, 72) ;
+background-color:#682110;
 
 }
 
@@ -103,7 +103,8 @@ background-color:rgb(207, 155, 72) ;
     align-items: center;
 }
 .order:hover{
-    background-color:rgb(207, 155, 72) ;
+    background-color:#682110;
+    transition: 0.5s;
 }
 a{
     text-decoration: none;
@@ -517,4 +518,15 @@ header{
     display: flex;
     justify-content: space-around;
     margin-left: 10px;
+}
+.proceed-button{
+    background-color: #B3391C;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 10px;
+}
+.proceed-button:hover{
+    background-color: #682110;
+    transition: 0.5s;
 }

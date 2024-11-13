@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const paymentFormContainer = document.getElementById('payment-form-container');
         paymentFormContainer.innerHTML = '';
         const selectedPayment = this.value;
-
+    
         if (selectedPayment === 'credit/debit') {
             paymentFormContainer.innerHTML = `
                 <label for="card-number">Card Number:</label>
@@ -60,7 +60,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p>Please come to the register to complete your purchase.</p>
             `;
         }
-    });
+        if (selectedPayment) {
+            paymentFormContainer.innerHTML += `
+                <button id="proceed-to-receipt" class="proceed-button">Proceed to Receipt</button>
+            `;
 
-    updateTotal();
+            document.getElementById('proceed-to-receipt').addEventListener('click', function() {
+                window.location.href = 'receipt.html';
+            });
+        }
+    });
+    window.addEventListener('beforeunload', () => {
+        paymentSelect.value = '';
+    });
 });
