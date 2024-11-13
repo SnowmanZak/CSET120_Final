@@ -62,12 +62,26 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         if (selectedPayment) {
             paymentFormContainer.innerHTML += `
-                <button id="proceed-to-receipt" class="proceed-button">Proceed to Receipt</button>
+                <button id="proceed-to-receipt" class="proceed-button">Complete Purchase</button>
             `;
-
             document.getElementById('proceed-to-receipt').addEventListener('click', function() {
+                const tipAmount = parseFloat(document.getElementById('tip-amount').value) || 0;
+                localStorage.setItem('tipAmount', tipAmount.toFixed(2));
+            
+                const paymentMethod = document.getElementById('payment').value;
+                localStorage.setItem('paymentMethod', paymentMethod);
+            
+                if (paymentMethod === 'credit/debit') {
+                    const cardNumber = document.getElementById('card-number').value;
+                    localStorage.setItem('cardLastFour', cardNumber.slice(-4)); 
+                } else if (paymentMethod === 'gift card') {
+                    const giftCardCode = document.getElementById('gift-card-code').value;
+                    localStorage.setItem('giftCardCode', giftCardCode);
+                } else if (paymentMethod === 'cash') {
+                    localStorage.setItem('cashPayment', 'Please pay at the register.');
+                }           
                 window.location.href = 'receipt.html';
-            });
+            });            
         }
     });
     window.addEventListener('beforeunload', () => {
