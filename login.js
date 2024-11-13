@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (enteredUsername === savedUsername && enteredEmail === savedEmail && enteredPassword === savedPassword) {
             alert("Login successful!");
             localStorage.setItem('loggedInUser', enteredUsername);
-            window.location.href = "index.html";
+            window.location.href = "order.html";
         } else {
             alert("Incorrect username, email, or password. Please try again.");
         }
