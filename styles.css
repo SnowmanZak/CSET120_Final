@@ -218,22 +218,27 @@ button:hover{
 }
 .logIn{
     background-color: antiquewhite;
+    color: #682110;
+    text-decoration: none;
 }
 .logIn:hover{
     background-color: #682110;
     color: antiquewhite;
     transition: 0.5s;
     border: antiquewhite solid 1px;
+    text-decoration: none;
 }
 .signUp{
     color: #682110;
     background-color: antiquewhite;
+    text-decoration: none;
 }
 .signUp:hover{
     background-color: #682110;
     color: antiquewhite;
     transition: 0.5s;
     border: antiquewhite solid 1px;
+    text-decoration: none;
 }
 .nav_bar{
     background-color: antiquewhite;
