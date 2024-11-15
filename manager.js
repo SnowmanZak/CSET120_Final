@@ -1,79 +1,62 @@
-
-function saveMenuItems() {
-    const menuItems = [];
-    document.querySelectorAll(".menu-items2").forEach(item => {
-        const itemName = item.querySelector(".item-name strong").innerText;
-        const itemDescription = item.querySelector(".item-name").innerText.replace(itemName + "\n", "");
-        const itemPrice = item.querySelector(".price").innerText.replace('$', '');
-        const itemImage = item.querySelector(".img2").src;
-
-        menuItems.push({ itemName, itemDescription, itemPrice, itemImage });
+document.addEventListener("DOMContentLoaded", () => {
+    // Function to handle adding a new item
+    const addNewItem = (button) => {
+      const section = button.closest(".row");
+  
+      // Prompt user for item details
+      const itemName = prompt("Enter the item name:");
+      const itemDescription = prompt("Enter the item description:");
+      const itemPrice = prompt("Enter the item price (e.g., $5.00):");
+      const itemImageURL = prompt("Enter the image URL for the item:");
+  
+      if (itemName && itemDescription && itemPrice && itemImageURL) {
+        // Create a new menu item
+        const newItem = document.createElement("div");
+        newItem.className = "menu-items2";
+        newItem.dataset.category = "custom";
+        newItem.innerHTML = `
+          <img class="img2" src="${itemImageURL}" alt="${itemName}">
+          <div class="menu-item-details2">
+              <p class="item-name"><strong>${itemName}</strong><br>${itemDescription}</p>
+              <p class="price">${itemPrice}</p>
+          </div>
+          <button class="btn-add">Add To cart</button>
+          <button class="remove">Remove From List</button>
+        `;
+  
+        // Append the new item to the section
+        section.appendChild(newItem);
+  
+        // Attach remove functionality to the new "Remove From List" button
+        attachRemoveHandler(newItem.querySelector(".remove"));
+  
+        alert(`${itemName} has been added to the menu!`);
+      } else {
+        alert("All fields are required to add a new item.");
+      }
+    };
+  
+    // Function to handle removing an item
+    const removeItem = (button) => {
+      const menuItem = button.closest(".menu-items2");
+      const itemName = menuItem.querySelector(".item-name strong").textContent;
+  
+      if (confirm(`Are you sure you want to remove "${itemName}" from the menu?`)) {
+        menuItem.remove();
+        alert(`${itemName} has been removed from the menu.`);
+      }
+    };
+  
+    // Attach remove functionality to all initial "Remove From List" buttons
+    const attachRemoveHandler = (button) => {
+      button.addEventListener("click", () => removeItem(button));
+    };
+  
+    document.querySelectorAll(".remove").forEach(attachRemoveHandler);
+  
+    // Attach add functionality to all "Add Item" buttons
+    document.querySelectorAll(".add-item").forEach((button) => {
+      button.addEventListener("click", () => addNewItem(button));
     });
-    localStorage.setItem("menuItems", JSON.stringify(menuItems));
-}
-
-
-function loadMenuItems() {
-    const savedItems = JSON.parse(localStorage.getItem("menuItems"));
-    if (savedItems) {
-        const rowContainer = document.querySelector(".coffee .row");
-        savedItems.forEach(({ itemName, itemDescription, itemPrice, itemImage }) => {
-            const newItem = createMenuItem(itemName, itemDescription, itemPrice, itemImage);
-            rowContainer.appendChild(newItem);
-        });
-    }
-}
-
-function createMenuItem(itemName, itemDescription, itemPrice, itemImage) {
-    const newItem = document.createElement("div");
-    newItem.classList.add("menu-items2");
-    newItem.dataset.category = "coffee";
-
-    newItem.innerHTML = `
-        <img class="img2" src="${itemImage}" alt="">
-        <div class="menu-item-details2">
-            <p class="item-name"><strong>${itemName}</strong><br>${itemDescription}</p>
-            <p class="price">$${parseFloat(itemPrice).toFixed(2)}</p>
-        </div>
-        <button class="btn-add">Add To cart</button>
-        <button class="remove">Remove From List</button>
-    `;
-
-    
-    newItem.querySelector(".remove").addEventListener("click", () => {
-        newItem.remove();
-        saveMenuItems();
-    });
-
-    return newItem;
-}
-
-document.querySelectorAll(".add-item").forEach((addItemButton) => {
-    addItemButton.addEventListener("click", () => {
-        const itemName = prompt("Enter the name of the new item:");
-        const itemDescription = prompt("Enter a description for the new item:");
-        const itemPrice = prompt("Enter the price of the new item:");
-        const itemImage = prompt("Enter the URL of the image for the new item:");
-
-        if (itemName && itemDescription && itemPrice && itemImage) {
-            const newItem = createMenuItem(itemName, itemDescription, itemPrice, itemImage);
-            const rowContainer = addItemButton.closest(".row");
-            rowContainer.appendChild(newItem);
-            saveMenuItems();
-        } else {
-            alert("Please fill out all details to add a new item.");
-        }
-    });
-});
-
-
-window.onload = function() {
-    const userRole = localStorage.getItem("userRole");
-    if (userRole !== "manager") {
-        alert("You do not have access to this page.");
-        window.location.href = "menu.html";
-    }
-};
-
-
-document.addEventListener("DOMContentLoaded", loadMenuItems);
+  });
+  
