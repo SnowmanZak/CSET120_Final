@@ -411,3 +411,72 @@ nav a:hover{
     text-align: center;
     height: 5600px;
 }
+.about-content {
+    font-family: 'Lobster Two', cursive;
+    line-height: 1.6;
+    background-color: antiquewhite;
+}
+.about-content h2 {
+    color: #B3391C;
+    text-align: center;
+}
+.mission-section, .story-section {
+    max-width: 50%;
+    margin: 0 auto; 
+    text-align: center; 
+}
+.mission-section p, .story-section p {
+    margin: 0 auto; 
+    text-align: center;
+    color: #682110;
+}
+.story-section img{
+    width: 50%;
+    height: 50%;
+}
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.team-member {
+    text-align: center; 
+    max-width: 200px; 
+}
+.team-member h3, 
+.team-member p {
+    margin: 5px 0;
+    color: #682110;
+}
+.team-members .team-photo {
+    width: 100%;
+    max-width: 400px;
+    height: 75%;
+    display: block;
+    margin: 10px auto;
+    border-radius: 10px;
+    text-align: center;
+}
+.values-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+.values-section li {
+    margin: 10px 0;
+    color: #682110;
+    text-align: center;
+}
+.testimonials-section{
+    padding-bottom: 20px;
+}
+.testimonials-section blockquote {
+    font-style: italic;
+    background: #f9f9f9;
+    color: #682110;
+    border-left: 5px solid #B3391C;
+    margin: 20px auto;
+    padding: 10px;
+    width: 90%;
+    max-width: 600px;
+}
