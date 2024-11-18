@@ -496,3 +496,26 @@ nav a:hover{
 .location-list{
     padding-bottom: 40px;
 }
+.support-main{
+    background-color: antiquewhite;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.support-main h2, h3{
+    color: #682110;
+}
+.support-main p{
+    color: #B3391C;
+}
+.support-main li{
+    color: #B3391C;
+}
+.support-intro{
+    padding-bottom: 20px;
+}
+.frequently-asked-questions{
+    padding-bottom: 20px;
+}
+.contact-support{
+    padding-bottom: 20px;
+}
