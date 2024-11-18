@@ -480,3 +480,19 @@ nav a:hover{
     width: 90%;
     max-width: 600px;
 }
+.locations-content{
+    background-color: antiquewhite;
+    color: #682110;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.locations-content h2{
+    padding-bottom: 20px;
+}
+.locations-content h2:first-child{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.location-list{
+    padding-bottom: 40px;
+}
