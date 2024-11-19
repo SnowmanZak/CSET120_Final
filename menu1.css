@@ -531,4 +531,57 @@ header{
     background-color: #682110;
     transition: 0.5s;
 }
+.homePage{
+    border: #2e1c19 2px solid;
+    align-self: center;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    width: 900px;
+}
 
+.deals{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.promo{
+    width: 400px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+}
+
+.order-btn{
+    align-self: center;
+    text-align: center;
+    background-color: #ad2909;
+    border-radius: 45px;
+    width: 300px;
+    margin: 10px;
+}
+
+.help{
+    color: #682110;
+}
+
+.help:hover{
+color: #3B579D;
+}
+
+.log-out{
+    background-color: #ad2909;
+    border-radius: 45px;
+    width: 80px;
+    height: 30px;
+    margin: 10px;
+    text-align: center;
+}
+
+.log-out:hover, .order-btn:hover{
+    background-color: #8c2208;
+}
