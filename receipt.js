@@ -9,13 +9,16 @@ document.addEventListener('DOMContentLoaded', () => {
     
     document.querySelector('.order-name').textContent = `${username}'s order`;
 
-    let total = 0;
+    let subtotal = 0;
+    let discountAmount = 0; 
+    let discountPercent = 0; 
 
+ 
     cartItems.forEach(item => {
         const price = parseFloat(item.price.replace('$', ''));
         const quantity = parseInt(item.quantity);
         const itemTotal = price * quantity;
-        total += itemTotal;
+        subtotal += itemTotal;
 
         const itemDetail = document.createElement('div');
         itemDetail.classList.add('menu-item-details4');
@@ -27,7 +30,24 @@ document.addEventListener('DOMContentLoaded', () => {
         orderReceiptContainer.appendChild(itemDetail);
     });
 
-    total += tipAmount;
+    const discountCode = localStorage.getItem('discountCode');
+    discountPercent = parseFloat(localStorage.getItem('discountPercent')) || 0;
+
+    if (discountCode) {
+        discountAmount = subtotal * (discountPercent / 100);
+        subtotal -= discountAmount;
+
+        const discountElement = document.createElement('div');
+        discountElement.classList.add('menu-item-details4');
+        discountElement.innerHTML = `
+            <p class="item-name"><strong>Discount (${discountCode})</strong><br>${discountPercent}% off</p>
+            <p class="price">- $${discountAmount.toFixed(2)}</p>
+        `;
+        orderReceiptContainer.appendChild(discountElement);
+    }
+
+
+    const totalAfterTip = subtotal + tipAmount;
 
     const tipElement = document.createElement('div');
     tipElement.classList.add('menu-item-details4');
@@ -37,7 +57,9 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
     orderReceiptContainer.appendChild(tipElement);
 
-    totalPriceElement.textContent = `$${total.toFixed(2)}`;
+
+    totalPriceElement.textContent = `$${totalAfterTip.toFixed(2)}`;
+
 
     const paymentDetailsSection = document.createElement('div');
     paymentDetailsSection.classList.add('payment-details');
