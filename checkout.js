@@ -36,7 +36,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.getElementById('payment').addEventListener('change', function() {
         const paymentFormContainer = document.getElementById('payment-form-container');
+        const discountCodeSection = document.querySelector('.discount-section')
         paymentFormContainer.innerHTML = '';
+        discountCodeSection.innerHTML = '';
         const selectedPayment = this.value;
     
         if (selectedPayment === 'credit/debit') {
@@ -50,16 +52,37 @@ document.addEventListener('DOMContentLoaded', () => {
                 <label for="cardholder-name">Cardholder Name:</label>
                 <input type="text" id="cardholder-name" name="cardholder-name" required>
             `;
+            discountCodeSection.innerHTML = `
+            <label for="discount-code">Enter Discount Code:</label>
+            <input type="text" id="discount-code" placeholder="Enter code for discount">
+            <button id="apply-discount" class="apply-discount-btn">Apply</button>
+            <p class="discount-message"></p>
+        `   ;
         } else if (selectedPayment === 'gift card') {
             paymentFormContainer.innerHTML = `
                 <label for="gift-card-code">Gift Card Code:</label>
                 <input type="text" id="gift-card-code" name="gift-card-code" placeholder="Enter your gift card code" required>
             `;
+            discountCodeSection.innerHTML = `
+            <label for="discount-code">Enter Discount Code:</label>
+            <input type="text" id="discount-code" placeholder="Enter code for discount">
+            <button id="apply-discount" class="apply-discount-btn">Apply</button>
+            <p class="discount-message"></p>
+        `   ;
         } else if (selectedPayment === 'cash') {
             paymentFormContainer.innerHTML = `
                 <p>Please come to the register to complete your purchase.</p>
             `;
+            discountCodeSection.innerHTML = `
+            <label for="discount-code">Enter Discount Code:</label>
+            <input type="text" id="discount-code" placeholder="Enter code for discount">
+            <button id="apply-discount" class="apply-discount-btn">Apply</button>
+            <p class="discount-message"></p>
+        `   ;
         }
+
+        paymentFormContainer.appendChild(discountCodeSection);
+
         if (selectedPayment) {
             paymentFormContainer.innerHTML += `
                 <button id="proceed-to-receipt" class="proceed-button">Complete Purchase</button>
@@ -83,8 +106,36 @@ document.addEventListener('DOMContentLoaded', () => {
                 window.location.href = 'receipt.html';
             });            
         }
+        document.getElementById('apply-discount').addEventListener('click', function() {
+            const discountCode = document.getElementById('discount-code').value;
+            const itemsTotalPriceElement = document.querySelector('.items-total-price');
+            const totalPriceElement = document.querySelector('.total-price');
+            const discountMessageElement = document.querySelector('.discount-message');
+            const tipAmount = parseFloat(document.getElementById('tip-amount').value) || 0;
+
+            let itemsTotal = parseFloat(itemsTotalPriceElement.textContent.replace('$', '')) || 0;
+            let discount = 0;
+
+            const discountCodes = {
+                'FALL2024': 0.10, 
+                'GOBBLER': 0.20, 
+            };
+
+            if (discountCodes[discountCode]) {
+                discount = discountCodes[discountCode];
+                const discountAmount = itemsTotal * discount;
+                const discountedPrice = itemsTotal - discountAmount + tipAmount;
+
+                totalPriceElement.textContent = `$${discountedPrice.toFixed(2)}`;
+                discountMessageElement.textContent = `Discount Applied: ${Math.round(discount * 100)}% off!`;
+                discountMessageElement.style.color = 'green';
+            } else {
+                discountMessageElement.textContent = 'Invalid discount code!';
+                discountMessageElement.style.color = 'red';
+            }
+        });
+    });
     });
     window.addEventListener('beforeunload', () => {
         paymentSelect.value = '';
     });
-});
