@@ -115,7 +115,7 @@ button:hover{
     border: 1px solid transparent;
    padding: 10px;
   font-size: 15px;
-  margin-left: 160;
+  margin-left: 160px;
 }
 
 .signup-button1{
@@ -125,7 +125,7 @@ button:hover{
     border: 1px solid transparent;
    padding: 13px;
   font-size: 15px;
-  margin-right: 200;
+  margin-right: 200px;
   
 }
 .signup-or{
@@ -218,22 +218,27 @@ button:hover{
 }
 .logIn{
     background-color: antiquewhite;
+    color: #682110;
+    text-decoration: none;
 }
 .logIn:hover{
     background-color: #682110;
     color: antiquewhite;
     transition: 0.5s;
     border: antiquewhite solid 1px;
+    text-decoration: none;
 }
 .signUp{
     color: #682110;
     background-color: antiquewhite;
+    text-decoration: none;
 }
 .signUp:hover{
     background-color: #682110;
     color: antiquewhite;
     transition: 0.5s;
     border: antiquewhite solid 1px;
+    text-decoration: none;
 }
 .nav_bar{
     background-color: antiquewhite;
@@ -405,4 +410,113 @@ nav a:hover{
     align-items: center;
     text-align: center;
     height: 5600px;
+}
+.about-content {
+    font-family: 'Lobster Two', cursive;
+    line-height: 1.6;
+    background-color: antiquewhite;
+}
+.about-content h2 {
+    color: #B3391C;
+    text-align: center;
+}
+.mission-section, .story-section {
+    max-width: 50%;
+    margin: 0 auto; 
+    text-align: center; 
+}
+.mission-section p, .story-section p {
+    margin: 0 auto; 
+    text-align: center;
+    color: #682110;
+}
+.story-section img{
+    width: 50%;
+    height: 50%;
+}
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.team-member {
+    text-align: center; 
+    max-width: 200px; 
+    padding-bottom: 20px;
+}
+.team-member h3, 
+.team-member p {
+    margin: 5px 0;
+    color: #682110;
+}
+.team-members .team-photo {
+    width: 100%;
+    max-width: 400px;
+    height: 75%;
+    display: block;
+    margin: 10px auto;
+    border-radius: 10px;
+    text-align: center;
+}
+.values-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+.values-section li {
+    margin: 10px 0;
+    color: #682110;
+    text-align: center;
+}
+.testimonials-section{
+    padding-bottom: 20px;
+}
+.testimonials-section blockquote {
+    font-style: italic;
+    background: #f9f9f9;
+    color: #682110;
+    border-left: 5px solid #B3391C;
+    margin: 20px auto;
+    padding: 10px;
+    width: 90%;
+    max-width: 600px;
+}
+.locations-content{
+    background-color: antiquewhite;
+    color: #682110;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.locations-content h2{
+    padding-bottom: 20px;
+}
+.locations-content h2:first-child{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.location-list{
+    padding-bottom: 40px;
+}
+.support-main{
+    background-color: antiquewhite;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.support-main h2, h3{
+    color: #682110;
+}
+.support-main p{
+    color: #B3391C;
+}
+.support-main li{
+    color: #B3391C;
+}
+.support-intro{
+    padding-bottom: 20px;
+}
+.frequently-asked-questions{
+    padding-bottom: 20px;
+}
+.contact-support{
+    padding-bottom: 20px;
 }

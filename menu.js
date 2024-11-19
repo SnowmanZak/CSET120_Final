@@ -22,4 +22,31 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     });
-});
+}); 
+ function loadMenu() {
+    return JSON.parse(localStorage.getItem('menuItems')) || [];
+}
+
+// Render the menu on the customer page
+function renderCustomerMenu() {
+    const menu = loadMenu();
+    const container = document.getElementById('customer-menu-container');
+    container.innerHTML = '';
+
+    menu.forEach((item) => {
+        const menuItemHTML = `
+            <div class="menu-item">
+                <img src="${item.image}" alt="${item.name}">
+                <div>
+                    <p><strong>${item.name}</strong></p>
+                    <p>${item.description}</p>
+                    <p>${item.price}</p>
+                </div>
+            </div>
+        `;
+        container.innerHTML += menuItemHTML;
+    });
+}
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', renderCustomerMenu);
