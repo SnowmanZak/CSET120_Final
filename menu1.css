@@ -223,14 +223,7 @@ width: 35px;
     display: flex;
     flex-direction: column;
     align-items: center;
-<<<<<<< HEAD
-    text-align: center;
-    
-        
-=======
-    text-align: center    
-     
->>>>>>> 012cecb44095629e429085664e1f7759e5947484
+    text-align: center;   
 }
 
 .bottom{
@@ -291,10 +284,7 @@ header{
 .quantity{
     display: flex;
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 012cecb44095629e429085664e1f7759e5947484
 .Orders{
     margin-left: 130px;
 }
@@ -491,10 +481,6 @@ header{
 .footer-bottom p {
     margin: 0;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 012cecb44095629e429085664e1f7759e5947484
 .back-1{
     display: flex;
     justify-content: space-around;
@@ -531,16 +517,9 @@ header{
     display: flex;
     justify-content: space-around;
     margin-left: 10px;
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
 
 }
 
->>>>>>> 012cecb44095629e429085664e1f7759e5947484
-=======
-}
 .proceed-button{
     background-color: #B3391C;
     color: white;
@@ -553,5 +532,3 @@ header{
     transition: 0.5s;
 }
 
-
->>>>>>> 5088722a42343a0c50a9a886a6a8458d47089f55
