@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem("password", password);
 
         alert("Sign-up successful! You can now log in.");
-        window.location.href = "login.html"; // Redirect to login page
+        window.location.href = "order.html"; // Redirect to login page
     });
 
     loginButton.addEventListener("click", function () {
