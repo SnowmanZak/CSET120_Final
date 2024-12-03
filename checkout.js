@@ -118,13 +118,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const discountCodes = {
                 'FALL2024': 0.10, 
-                'GOBBLER': 0.20, 
+                'TURKEY': 0.20, 
             };
 
             if (discountCodes[discountCode]) {
                 discount = discountCodes[discountCode];
                 const discountAmount = itemsTotal * discount;
                 const discountedPrice = itemsTotal - discountAmount + tipAmount;
+
+                localStorage.setItem('discountCode', discountCode);
+                localStorage.setItem('discountPercent', discount * 100);
 
                 totalPriceElement.textContent = `$${discountedPrice.toFixed(2)}`;
                 discountMessageElement.textContent = `Discount Applied: ${Math.round(discount * 100)}% off!`;

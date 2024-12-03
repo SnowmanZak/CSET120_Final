@@ -115,7 +115,7 @@ button:hover{
     border: 1px solid transparent;
    padding: 10px;
   font-size: 15px;
-  margin-left: 160;
+  margin-left: 160px;
 }
 
 .signup-button1{
@@ -125,7 +125,7 @@ button:hover{
     border: 1px solid transparent;
    padding: 13px;
   font-size: 15px;
-  margin-right: 200;
+  margin-right: 200px;
   
 }
 .signup-or{
@@ -165,7 +165,7 @@ button:hover{
     color: black;
 }
 .background{
-    background-image: url(images/OIP\ \(1\).jpg) ;
+    background-image: url(images/il_570xN.6077565577_scbk.avif) ;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -520,3 +520,9 @@ nav a:hover{
 .contact-support{
     padding-bottom: 20px;
 }
+.submit{
+    background-color: #B3391C;;
+    border-radius: 40px;
+    height: 25px;
+}
+
