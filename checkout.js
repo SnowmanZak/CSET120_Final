@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     cartItems.forEach(item => {
         const price = parseFloat(item.price.replace('$', ''));
         const quantity = parseFloat(item.quantity);
+        
         const itemTotal = price * quantity;
         itemsTotal += itemTotal;
         etaMinutes += quantity * minutesPerItem;
