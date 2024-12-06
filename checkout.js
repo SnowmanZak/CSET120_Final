@@ -42,39 +42,39 @@ document.addEventListener('DOMContentLoaded', () => {
         const selectedPayment = this.value;
     
         if (selectedPayment === 'credit/debit') {
-            paymentFormContainer.innerHTML = `
-                <label for="card-number">Card Number:</label>
-                <input type="text" id="card-number" name="card-number" placeholder="XXXX-XXXX-XXXX-XXXX" required><br>
-                <label for="expiry-date">Expiry Date:</label>
-                <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" required><br>
-                <label for="cvv">CVV:</label>
-                <input type="text" id="cvv" name="cvv" placeholder="XXX" required><br>
-                <label for="cardholder-name">Cardholder Name:</label>
-                <input type="text" id="cardholder-name" name="cardholder-name" required>
-            `;
+            paymentFormContainer.innerHTML =`
+        <label for="card-number" style="font-size: 25px;">Card Number:</label>
+        <input type="text" id="card-number" name="card-number" placeholder="XXXX-XXXX-XXXX-XXXX" required ;"><br>
+        <label for="expiry-date" style="font-size: 25px;">Expiry Date:</label>
+        <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" required "><br>
+        <label for="cvv" style="font-size: 25px;">CVV:</label>
+        <input type="text" id="cvv" name="cvv" placeholder="XXX" required ;"><br>
+        <label for="cardholder-name" style="font-size: 25px;">Cardholder Name:</label>
+        <input type="text" id="cardholder-name" name="cardholder-name" required >
+    `;
             discountCodeSection.innerHTML = `
-            <label for="discount-code">Enter Discount Code:</label>
-            <input type="text" id="discount-code" placeholder="Enter code for discount">
-            <button id="apply-discount" class="apply-discount-btn">Apply</button>
-            <p class="discount-message"></p>
-        `   ;
+  <label for="discount-code" style="font-size: 25px;">Enter Discount Code:</label>
+  <input type="text" id="discount-code" placeholder="Enter code for discount" padding: 10px; width: 300px;">
+  <button id="apply-discount" class="apply-discount-btn" ; padding: 10px 20px; margin-left: 10px; cursor: pointer;">Apply</button>
+  <p class="discount-message" style="font-size: 25px; margin-top: 10px; color: #333;"></p>
+`  ;
         } else if (selectedPayment === 'gift card') {
             paymentFormContainer.innerHTML = `
-                <label for="gift-card-code">Gift Card Code:</label>
+                <label for="gift-card-code" style="font-size: 25px;">Gift Card Code:</label>
                 <input type="text" id="gift-card-code" name="gift-card-code" placeholder="Enter your gift card code" required>
             `;
             discountCodeSection.innerHTML = `
-            <label for="discount-code">Enter Discount Code:</label>
+            <label for="discount-code" style="font-size: 25px;">Enter Discount Code:</label>
             <input type="text" id="discount-code" placeholder="Enter code for discount">
             <button id="apply-discount" class="apply-discount-btn">Apply</button>
             <p class="discount-message"></p>
         `   ;
         } else if (selectedPayment === 'cash') {
             paymentFormContainer.innerHTML = `
-                <p>Please come to the register to complete your purchase.</p>
+                <p style="font-size: 25px;">Please come to the register to complete your purchase.</p>
             `;
             discountCodeSection.innerHTML = `
-            <label for="discount-code">Enter Discount Code:</label>
+            <label for="discount-code" style="font-size: 25px;">Enter Discount Code:</label>
             <input type="text" id="discount-code" placeholder="Enter code for discount">
             <button id="apply-discount" class="apply-discount-btn">Apply</button>
             <p class="discount-message"></p>
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (selectedPayment) {
             paymentFormContainer.innerHTML += `
-                <button id="proceed-to-receipt" class="proceed-button">Complete Purchase</button>
+                <button id="proceed-to-receipt" class="proceed-button" style = " margin-bottom: 20px;">Complete Purchase</button>
             `;
             document.getElementById('proceed-to-receipt').addEventListener('click', function() {
                 const tipAmount = parseFloat(document.getElementById('tip-amount').value) || 0;
