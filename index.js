@@ -4,6 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const usernameDisplay = document.getElementById('username-display');
     usernameDisplay.style.marginRight="100px"
 
+    localStorage.removeItem('cartItems')
+    localStorage.removeItem('discountCode')
+    localStorage.removeItem('username')
+
    
     const loggedInUser = localStorage.getItem('loggedInUser');
     
