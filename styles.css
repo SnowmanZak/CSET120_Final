@@ -520,3 +520,9 @@ nav a:hover{
 .contact-support{
     padding-bottom: 20px;
 }
+.submit{
+    background-color: #B3391C;;
+    border-radius: 40px;
+    height: 25px;
+}
+
