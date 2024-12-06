@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     localStorage.removeItem('cartItems')
     localStorage.removeItem('discountCode')
+    localStorage.removeItem('username')
 
    
     const loggedInUser = localStorage.getItem('loggedInUser');
