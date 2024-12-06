@@ -675,4 +675,8 @@ color: #3B579D;
 .menu-item-details2 {
     text-align: center; 
 }
-
+.home-btn{
+    color: rgb(255, 255, 255);
+    background-color: #ad2909;
+    border-radius: 40px;
+}

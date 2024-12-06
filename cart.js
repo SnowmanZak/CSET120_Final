@@ -45,7 +45,7 @@ function createCartRow(item) {
             </div>
         </div>
         <div class="quantity">
-            <input class="cart-quantity-input" type="number" value="${item.quantity}" min="1">
+            <input class="cart-quantity-input" type="number" value="${item.quantity}" min="1" max="99" maxlength="2" oninput="this.value=this.value.slice(0,this.maxLength||1/1);this.value=(this.value   < 1) ? (1/1) : this.value;">
             <button class="btn2 btn-danger" type="button">REMOVE</button>
         </div>
     `;
@@ -78,6 +78,7 @@ function updateCartTotal() {
 
         const quantityInput = row.querySelector('.cart-quantity-input');
         const quantity = parseFloat(quantityInput.value);
+        
 
         if (!isNaN(price) && !isNaN(quantity)) {
             total += price * quantity;

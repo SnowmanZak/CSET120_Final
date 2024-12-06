@@ -41,18 +41,22 @@ function initializeOrderPage() {
                 const itemName = menuItem.querySelector(".item-name").textContent.trim();
                 const itemPrice = menuItem.querySelector(".price").textContent.trim();
                 const itemImage = menuItem.querySelector("img").src;
-
+    
                 const item = {
                     name: itemName,
                     price: itemPrice,
                     image: itemImage,
                     quantity: 1,
                 };
-
+    
                 let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-                cartItems.push(item);
+                const existingItem = cartItems.find(cartItem => cartItem.name === itemName);
+                if (existingItem) {
+                    existingItem.quantity += 1;
+                } else {
+                    cartItems.push(item);
+                }
                 localStorage.setItem("cartItems", JSON.stringify(cartItems));
-
                 alert("Item added to cart!");
             });
         });
